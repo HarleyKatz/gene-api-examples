@@ -17,3 +17,5 @@ curl https://david-gene-api.herokuapp.com/auth/genes/<gene> -H "Accept: applicat
 ```
 
 For example, one can replace `<gene>` with `brca2` to obtain information on the BRCA2 gene. The code will return a 401 error if the request is unauthorized or `NOT FOUND` for an unrecognized gene.
+
+A python example using the `requests` library can be found in `example.py`
