@@ -11,7 +11,7 @@ curl --request POST \
   --data '{"username":"<username>","password":"<passowrd>"}'
 ```
 
-Once using the JWT token, you can then query the genes enpoint with
+Once the JWT token is obtained, you can then query the genes enpoint with
 ```
 curl https://david-gene-api.herokuapp.com/auth/genes/<gene> -H "Accept: application/json" -H "Authorization: JWT <token>"
 ```
