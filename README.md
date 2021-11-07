@@ -6,6 +6,14 @@ To query the API, first obtain a JWT token via the authentication endpoint. For 
 
 ```
 curl --request POST \
-  --url https://david-gene-api.herokuapp.com/auth  \                                                                              --header 'content-type: application/json' \
+  --url https://david-gene-api.herokuapp.com/auth \ 
+  --header 'content-type: application/json' \
   --data '{"username":"<username>","password":"<passowrd>"}'
 ```
+
+Once using the JWT token, you can then query the genes enpoint with
+```
+curl https://david-gene-api.herokuapp.com/auth/genes/<gene> -H "Accept: application/json" -H "Authorization: JWT <token>"
+```
+
+For example, one can replace `<gene>` with `brca2` to obtain information on the BRCA2 gene. The code will return a 401 error if the request is unauthorized or `NOT FOUND` for an unrecognized gene.
