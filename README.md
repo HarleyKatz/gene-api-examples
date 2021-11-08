@@ -1,6 +1,6 @@
 # Example code for querying the gene API
 
-Querying the gene API requires both a username and password. To request access to the API, contact David Bick. 
+Querying the gene API requires both a username and password. To request access to the API, fill out the contact form [here](https://www.rx-genes.com/contact-us/). 
 
 To query the API, first obtain a JWT token via the authentication endpoint. For example:
 
